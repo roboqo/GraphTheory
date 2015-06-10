@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2951DCDF1B28ED5B00554B3A /* Dijkstra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951DCDE1B28ED5B00554B3A /* Dijkstra.swift */; };
+		2951DCE11B28EEA500554B3A /* ShortestPathBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951DCE01B28EEA500554B3A /* ShortestPathBase.swift */; };
+		2951DCE31B28EEFC00554B3A /* AStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2951DCE21B28EEFC00554B3A /* AStar.swift */; };
+		29ACABDA1B27805500FE95F4 /* GraphTheoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACABD91B27805500FE95F4 /* GraphTheoryTests.swift */; };
+		29ACABE51B27805500FE95F4 /* GraphTheoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACABE41B27805500FE95F4 /* GraphTheoryUITests.swift */; };
+		29ACABF51B27830300FE95F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACABF31B27830300FE95F4 /* AppDelegate.swift */; };
+		29ACABF61B27830300FE95F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACABF31B27830300FE95F4 /* AppDelegate.swift */; };
+		29ACABF71B27830300FE95F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACABF31B27830300FE95F4 /* AppDelegate.swift */; };
+		29ACABFD1B2783BE00FE95F4 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACABFC1B2783BE00FE95F4 /* PriorityQueue.swift */; };
+		29ACABFE1B2783BE00FE95F4 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACABFC1B2783BE00FE95F4 /* PriorityQueue.swift */; };
+		29ACABFF1B2783BE00FE95F4 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACABFC1B2783BE00FE95F4 /* PriorityQueue.swift */; };
+		29ACAC021B2783FC00FE95F4 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC011B2783FC00FE95F4 /* Drawable.swift */; };
+		29ACAC031B2783FC00FE95F4 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC011B2783FC00FE95F4 /* Drawable.swift */; };
+		29ACAC041B2783FC00FE95F4 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC011B2783FC00FE95F4 /* Drawable.swift */; };
+		29ACAC061B27840C00FE95F4 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC051B27840C00FE95F4 /* Edge.swift */; };
+		29ACAC071B27840C00FE95F4 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC051B27840C00FE95F4 /* Edge.swift */; };
+		29ACAC081B27840C00FE95F4 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC051B27840C00FE95F4 /* Edge.swift */; };
+		29ACAC0A1B27841600FE95F4 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC091B27841600FE95F4 /* Graph.swift */; };
+		29ACAC0B1B27841600FE95F4 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC091B27841600FE95F4 /* Graph.swift */; };
+		29ACAC0C1B27841600FE95F4 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC091B27841600FE95F4 /* Graph.swift */; };
+		29ACAC0E1B27842400FE95F4 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC0D1B27842400FE95F4 /* Vertex.swift */; };
+		29ACAC0F1B27842400FE95F4 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC0D1B27842400FE95F4 /* Vertex.swift */; };
+		29ACAC101B27842400FE95F4 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC0D1B27842400FE95F4 /* Vertex.swift */; };
+		29ACAC131B27918700FE95F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29ACAC121B27918700FE95F4 /* Assets.xcassets */; };
+		29ACAC141B27918700FE95F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29ACAC121B27918700FE95F4 /* Assets.xcassets */; };
+		29ACAC151B27918700FE95F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29ACAC121B27918700FE95F4 /* Assets.xcassets */; };
+		29ACAC1C1B2791C800FE95F4 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC1B1B2791C800FE95F4 /* GraphViewController.swift */; };
+		29ACAC1D1B2791C800FE95F4 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC1B1B2791C800FE95F4 /* GraphViewController.swift */; };
+		29ACAC1E1B2791C800FE95F4 /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC1B1B2791C800FE95F4 /* GraphViewController.swift */; };
+		29ACAC211B27922100FE95F4 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC201B27922100FE95F4 /* GraphView.swift */; };
+		29ACAC221B27922100FE95F4 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC201B27922100FE95F4 /* GraphView.swift */; };
+		29ACAC231B27922100FE95F4 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29ACAC201B27922100FE95F4 /* GraphView.swift */; };
+		29ACAC2A1B2792AA00FE95F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29ACAC281B2792AA00FE95F4 /* Main.storyboard */; };
+		29ACAC2B1B2792AA00FE95F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29ACAC281B2792AA00FE95F4 /* Main.storyboard */; };
+		29ACAC2C1B2792AA00FE95F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29ACAC281B2792AA00FE95F4 /* Main.storyboard */; };
+		29ACAC2D1B2792AA00FE95F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29ACAC291B2792AA00FE95F4 /* LaunchScreen.storyboard */; };
+		29ACAC2E1B2792AA00FE95F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29ACAC291B2792AA00FE95F4 /* LaunchScreen.storyboard */; };
+		29ACAC2F1B2792AA00FE95F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29ACAC291B2792AA00FE95F4 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29ACABD61B27805500FE95F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29ACABB91B27805500FE95F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29ACABC01B27805500FE95F4;
+			remoteInfo = GraphTheory;
+		};
+		29ACABE11B27805500FE95F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29ACABB91B27805500FE95F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29ACABC01B27805500FE95F4;
+			remoteInfo = GraphTheory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2951DCDE1B28ED5B00554B3A /* Dijkstra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dijkstra.swift; sourceTree = "<group>"; };
+		2951DCE01B28EEA500554B3A /* ShortestPathBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortestPathBase.swift; sourceTree = "<group>"; };
+		2951DCE21B28EEFC00554B3A /* AStar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AStar.swift; sourceTree = "<group>"; };
+		29ACABC11B27805500FE95F4 /* GraphTheory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphTheory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29ACABD51B27805500FE95F4 /* GraphTheoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphTheoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29ACABD91B27805500FE95F4 /* GraphTheoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTheoryTests.swift; sourceTree = "<group>"; };
+		29ACABDB1B27805500FE95F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29ACABE01B27805500FE95F4 /* GraphTheoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphTheoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29ACABE41B27805500FE95F4 /* GraphTheoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTheoryUITests.swift; sourceTree = "<group>"; };
+		29ACABE61B27805500FE95F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29ACABF31B27830300FE95F4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29ACABF41B27830300FE95F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29ACABFC1B2783BE00FE95F4 /* PriorityQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		29ACAC011B2783FC00FE95F4 /* Drawable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
+		29ACAC051B27840C00FE95F4 /* Edge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
+		29ACAC091B27841600FE95F4 /* Graph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
+		29ACAC0D1B27842400FE95F4 /* Vertex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		29ACAC121B27918700FE95F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29ACAC1B1B2791C800FE95F4 /* GraphViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		29ACAC201B27922100FE95F4 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		29ACAC281B2792AA00FE95F4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		29ACAC291B2792AA00FE95F4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29ACABBE1B27805500FE95F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29ACABD21B27805500FE95F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29ACABDD1B27805500FE95F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29ACABB81B27805500FE95F4 = {
+			isa = PBXGroup;
+			children = (
+				29ACABC31B27805500FE95F4 /* GraphTheory */,
+				29ACABD81B27805500FE95F4 /* GraphTheoryTests */,
+				29ACABE31B27805500FE95F4 /* GraphTheoryUITests */,
+				29ACABC21B27805500FE95F4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29ACABC21B27805500FE95F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29ACABC11B27805500FE95F4 /* GraphTheory.app */,
+				29ACABD51B27805500FE95F4 /* GraphTheoryTests.xctest */,
+				29ACABE01B27805500FE95F4 /* GraphTheoryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29ACABC31B27805500FE95F4 /* GraphTheory */ = {
+			isa = PBXGroup;
+			children = (
+				29ACAC001B2783D200FE95F4 /* Models */,
+				29ACABFB1B27838F00FE95F4 /* Algorithms */,
+				29ACAC111B27915100FE95F4 /* Resources */,
+				29ACAC161B27919500FE95F4 /* View Controllers */,
+				29ACAC1F1B27920100FE95F4 /* Views */,
+				29ACABF21B2782AC00FE95F4 /* Application */,
+			);
+			path = GraphTheory;
+			sourceTree = "<group>";
+		};
+		29ACABD81B27805500FE95F4 /* GraphTheoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				29ACABD91B27805500FE95F4 /* GraphTheoryTests.swift */,
+				29ACABDB1B27805500FE95F4 /* Info.plist */,
+			);
+			path = GraphTheoryTests;
+			sourceTree = "<group>";
+		};
+		29ACABE31B27805500FE95F4 /* GraphTheoryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				29ACABE41B27805500FE95F4 /* GraphTheoryUITests.swift */,
+				29ACABE61B27805500FE95F4 /* Info.plist */,
+			);
+			path = GraphTheoryUITests;
+			sourceTree = "<group>";
+		};
+		29ACABF21B2782AC00FE95F4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				29ACABF31B27830300FE95F4 /* AppDelegate.swift */,
+				29ACABF41B27830300FE95F4 /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		29ACABFB1B27838F00FE95F4 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				29ACABFC1B2783BE00FE95F4 /* PriorityQueue.swift */,
+				2951DCE01B28EEA500554B3A /* ShortestPathBase.swift */,
+				2951DCDE1B28ED5B00554B3A /* Dijkstra.swift */,
+				2951DCE21B28EEFC00554B3A /* AStar.swift */,
+			);
+			path = Algorithms;
+			sourceTree = "<group>";
+		};
+		29ACAC001B2783D200FE95F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				29ACAC011B2783FC00FE95F4 /* Drawable.swift */,
+				29ACAC051B27840C00FE95F4 /* Edge.swift */,
+				29ACAC091B27841600FE95F4 /* Graph.swift */,
+				29ACAC0D1B27842400FE95F4 /* Vertex.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		29ACAC111B27915100FE95F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29ACAC121B27918700FE95F4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29ACAC161B27919500FE95F4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				29ACAC1B1B2791C800FE95F4 /* GraphViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		29ACAC1F1B27920100FE95F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29ACAC281B2792AA00FE95F4 /* Main.storyboard */,
+				29ACAC291B2792AA00FE95F4 /* LaunchScreen.storyboard */,
+				29ACAC201B27922100FE95F4 /* GraphView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29ACABC01B27805500FE95F4 /* GraphTheory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29ACABE91B27805500FE95F4 /* Build configuration list for PBXNativeTarget "GraphTheory" */;
+			buildPhases = (
+				29ACABBD1B27805500FE95F4 /* Sources */,
+				29ACABBE1B27805500FE95F4 /* Frameworks */,
+				29ACABBF1B27805500FE95F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GraphTheory;
+			productName = GraphTheory;
+			productReference = 29ACABC11B27805500FE95F4 /* GraphTheory.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29ACABD41B27805500FE95F4 /* GraphTheoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29ACABEC1B27805500FE95F4 /* Build configuration list for PBXNativeTarget "GraphTheoryTests" */;
+			buildPhases = (
+				29ACABD11B27805500FE95F4 /* Sources */,
+				29ACABD21B27805500FE95F4 /* Frameworks */,
+				29ACABD31B27805500FE95F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29ACABD71B27805500FE95F4 /* PBXTargetDependency */,
+			);
+			name = GraphTheoryTests;
+			productName = GraphTheoryTests;
+			productReference = 29ACABD51B27805500FE95F4 /* GraphTheoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		29ACABDF1B27805500FE95F4 /* GraphTheoryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29ACABEF1B27805500FE95F4 /* Build configuration list for PBXNativeTarget "GraphTheoryUITests" */;
+			buildPhases = (
+				29ACABDC1B27805500FE95F4 /* Sources */,
+				29ACABDD1B27805500FE95F4 /* Frameworks */,
+				29ACABDE1B27805500FE95F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29ACABE21B27805500FE95F4 /* PBXTargetDependency */,
+			);
+			name = GraphTheoryUITests;
+			productName = GraphTheoryUITests;
+			productReference = 29ACABE01B27805500FE95F4 /* GraphTheoryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29ACABB91B27805500FE95F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "TAPTAP mobile";
+				TargetAttributes = {
+					29ACABC01B27805500FE95F4 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					29ACABD41B27805500FE95F4 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 29ACABC01B27805500FE95F4;
+					};
+					29ACABDF1B27805500FE95F4 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 29ACABC01B27805500FE95F4;
+					};
+				};
+			};
+			buildConfigurationList = 29ACABBC1B27805500FE95F4 /* Build configuration list for PBXProject "GraphTheory" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29ACABB81B27805500FE95F4;
+			productRefGroup = 29ACABC21B27805500FE95F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29ACABC01B27805500FE95F4 /* GraphTheory */,
+				29ACABD41B27805500FE95F4 /* GraphTheoryTests */,
+				29ACABDF1B27805500FE95F4 /* GraphTheoryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29ACABBF1B27805500FE95F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29ACAC131B27918700FE95F4 /* Assets.xcassets in Resources */,
+				29ACAC2D1B2792AA00FE95F4 /* LaunchScreen.storyboard in Resources */,
+				29ACAC2A1B2792AA00FE95F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29ACABD31B27805500FE95F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29ACAC141B27918700FE95F4 /* Assets.xcassets in Resources */,
+				29ACAC2E1B2792AA00FE95F4 /* LaunchScreen.storyboard in Resources */,
+				29ACAC2B1B2792AA00FE95F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29ACABDE1B27805500FE95F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29ACAC151B27918700FE95F4 /* Assets.xcassets in Resources */,
+				29ACAC2F1B2792AA00FE95F4 /* LaunchScreen.storyboard in Resources */,
+				29ACAC2C1B2792AA00FE95F4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29ACABBD1B27805500FE95F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29ACAC0A1B27841600FE95F4 /* Graph.swift in Sources */,
+				29ACABF51B27830300FE95F4 /* AppDelegate.swift in Sources */,
+				29ACAC211B27922100FE95F4 /* GraphView.swift in Sources */,
+				2951DCE11B28EEA500554B3A /* ShortestPathBase.swift in Sources */,
+				29ACABFD1B2783BE00FE95F4 /* PriorityQueue.swift in Sources */,
+				29ACAC061B27840C00FE95F4 /* Edge.swift in Sources */,
+				29ACAC1C1B2791C800FE95F4 /* GraphViewController.swift in Sources */,
+				29ACAC0E1B27842400FE95F4 /* Vertex.swift in Sources */,
+				2951DCE31B28EEFC00554B3A /* AStar.swift in Sources */,
+				29ACAC021B2783FC00FE95F4 /* Drawable.swift in Sources */,
+				2951DCDF1B28ED5B00554B3A /* Dijkstra.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29ACABD11B27805500FE95F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29ACAC0B1B27841600FE95F4 /* Graph.swift in Sources */,
+				29ACABF61B27830300FE95F4 /* AppDelegate.swift in Sources */,
+				29ACAC221B27922100FE95F4 /* GraphView.swift in Sources */,
+				29ACABDA1B27805500FE95F4 /* GraphTheoryTests.swift in Sources */,
+				29ACABFE1B2783BE00FE95F4 /* PriorityQueue.swift in Sources */,
+				29ACAC071B27840C00FE95F4 /* Edge.swift in Sources */,
+				29ACAC1D1B2791C800FE95F4 /* GraphViewController.swift in Sources */,
+				29ACAC0F1B27842400FE95F4 /* Vertex.swift in Sources */,
+				29ACAC031B2783FC00FE95F4 /* Drawable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29ACABDC1B27805500FE95F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29ACAC0C1B27841600FE95F4 /* Graph.swift in Sources */,
+				29ACABF71B27830300FE95F4 /* AppDelegate.swift in Sources */,
+				29ACAC231B27922100FE95F4 /* GraphView.swift in Sources */,
+				29ACABE51B27805500FE95F4 /* GraphTheoryUITests.swift in Sources */,
+				29ACABFF1B2783BE00FE95F4 /* PriorityQueue.swift in Sources */,
+				29ACAC081B27840C00FE95F4 /* Edge.swift in Sources */,
+				29ACAC1E1B2791C800FE95F4 /* GraphViewController.swift in Sources */,
+				29ACAC101B27842400FE95F4 /* Vertex.swift in Sources */,
+				29ACAC041B2783FC00FE95F4 /* Drawable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29ACABD71B27805500FE95F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29ACABC01B27805500FE95F4 /* GraphTheory */;
+			targetProxy = 29ACABD61B27805500FE95F4 /* PBXContainerItemProxy */;
+		};
+		29ACABE21B27805500FE95F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29ACABC01B27805500FE95F4 /* GraphTheory */;
+			targetProxy = 29ACABE11B27805500FE95F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		29ACABE71B27805500FE95F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29ACABE81B27805500FE95F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29ACABEA1B27805500FE95F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GraphTheory/Application/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taptapmobile.GraphTheory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		29ACABEB1B27805500FE95F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GraphTheory/Application/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taptapmobile.GraphTheory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		29ACABED1B27805500FE95F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GraphTheoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taptapmobile.GraphTheoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraphTheory.app/GraphTheory";
+			};
+			name = Debug;
+		};
+		29ACABEE1B27805500FE95F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GraphTheoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taptapmobile.GraphTheoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GraphTheory.app/GraphTheory";
+			};
+			name = Release;
+		};
+		29ACABF01B27805500FE95F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GraphTheoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taptapmobile.GraphTheoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GraphTheory;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		29ACABF11B27805500FE95F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GraphTheoryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taptapmobile.GraphTheoryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GraphTheory;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29ACABBC1B27805500FE95F4 /* Build configuration list for PBXProject "GraphTheory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29ACABE71B27805500FE95F4 /* Debug */,
+				29ACABE81B27805500FE95F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29ACABE91B27805500FE95F4 /* Build configuration list for PBXNativeTarget "GraphTheory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29ACABEA1B27805500FE95F4 /* Debug */,
+				29ACABEB1B27805500FE95F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29ACABEC1B27805500FE95F4 /* Build configuration list for PBXNativeTarget "GraphTheoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29ACABED1B27805500FE95F4 /* Debug */,
+				29ACABEE1B27805500FE95F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29ACABEF1B27805500FE95F4 /* Build configuration list for PBXNativeTarget "GraphTheoryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29ACABF01B27805500FE95F4 /* Debug */,
+				29ACABF11B27805500FE95F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29ACABB91B27805500FE95F4 /* Project object */;
+}
