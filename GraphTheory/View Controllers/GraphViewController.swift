@@ -144,10 +144,7 @@ class GraphViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
         guard let touch = touches.first else { return }
-        
-        if !self.touchesEnabled {
-            return
-        }
+        guard self.touchesEnabled else { return }
         
         var selectedVertex : Vertex?
         let location = touch.locationInView(view)

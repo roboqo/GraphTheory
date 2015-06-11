@@ -23,10 +23,7 @@ class Dijkstra: ShortestPathBase {
         
         while(queue.count > 0) {
             let current : Vertex = queue.next()!
-            
-            if current == to {
-                break
-            }
+            guard current != to else { break }
             
             for e : Edge in current.adjacencies {
                 let next : Vertex = e.target
