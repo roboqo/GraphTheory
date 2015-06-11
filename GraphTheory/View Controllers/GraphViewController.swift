@@ -97,34 +97,32 @@ class GraphViewController: UIViewController {
         self.graphView.activityLines.removeAll(keepCapacity: false)
         self.graphView.path = nil
         
-        if let from : Vertex = self.from {
-            if let to : Vertex = self.to {
-                
-                let defaults = NSUserDefaults.standardUserDefaults()
-                let saved : Int = defaults.integerForKey("algorithm")
-                self.graph.algorithm = ShortestPathAlgorithm(rawValue: saved)!
-                
-                self.graph.getShortestPath(from : from, to: to, graphView : self.graphView) {
-                    (path: Array<Vertex>) in
-                    
-                    self.graphView.from = from
-                    self.graphView.to = to
-                    self.graphView.path = path
-                    
-                    print("Path from: \(from.name)")
-                    print("Path to: \(to.name)")
-                    
-                    for i in 0 ..< path.count {
-                        let vertex : Vertex = path[i]
-                        print("\(vertex.name)", appendNewline: false)
-                        if (i < path.count - 1) {
-                            print(" -> ", appendNewline: false)
-                        }
-                    }
-                    print("")
-                    print("---")
+        guard let from : Vertex = self.from else { return }
+        guard let to : Vertex = self.to else { return }
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let saved : Int = defaults.integerForKey("algorithm")
+        self.graph.algorithm = ShortestPathAlgorithm(rawValue: saved)!
+        
+        self.graph.getShortestPath(from : from, to: to, graphView : self.graphView) {
+            (path: Array<Vertex>) in
+            
+            self.graphView.from = from
+            self.graphView.to = to
+            self.graphView.path = path
+            
+            print("Path from: \(from.name)")
+            print("Path to: \(to.name)")
+            
+            for i in 0 ..< path.count {
+                let vertex : Vertex = path[i]
+                print("\(vertex.name)", appendNewline: false)
+                if (i < path.count - 1) {
+                    print(" -> ", appendNewline: false)
                 }
             }
+            print("")
+            print("---")
         }
     }
     
@@ -152,26 +150,26 @@ class GraphViewController: UIViewController {
         selectedVertex = self.graph.findNearestVertex(Vertex(name: "-1", x: Double(location.x), y: Double(location.y)), limit: 0.0)
         print("Tap on \(selectedVertex?.name)")
         
-        if let vertex = selectedVertex {
-            let alert = UIAlertController(title: "Directions", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "From here", style: .Default, handler: { action in
-                self.from = vertex
-                vertex.highlighted = true
-                self.clearSelection()
-                self.getShortestPath()
-            }))
-            alert.addAction(UIAlertAction(title: "To here", style: .Default, handler: { action in
-                self.to = vertex
-                vertex.highlighted = true
-                self.clearSelection()
-                self.getShortestPath()
-            }))
-            alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
-                
-            }))
+        guard let vertex = selectedVertex else { return }
+        
+        let alert = UIAlertController(title: "Directions", message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "From here", style: .Default, handler: { action in
+            self.from = vertex
+            vertex.highlighted = true
+            self.clearSelection()
+            self.getShortestPath()
+        }))
+        alert.addAction(UIAlertAction(title: "To here", style: .Default, handler: { action in
+            self.to = vertex
+            vertex.highlighted = true
+            self.clearSelection()
+            self.getShortestPath()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
             
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+        }))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
     
     // Select different algorithms

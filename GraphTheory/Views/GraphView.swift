@@ -36,74 +36,73 @@ class GraphView: UIView {
     }
     
     override func drawRect(rect: CGRect) {
-        if let _ = self.graph?.vertices {
+        
+        guard let _ = self.graph?.vertices else { return }
+        let context = UIGraphicsGetCurrentContext()
+        
+        CGContextClearRect(context, self.bounds)
+        
+        // Set background color
+        UIColor(red:1, green:0.98, blue:0.95, alpha:1).setFill()
+        CGContextFillRect(context, self.bounds)
+        
+        // Draw all edges
+        CGContextSetLineWidth(context, 1.0);
+        CGContextSetLineJoin(context, kCGLineJoinRound);
+        CGContextSetLineCap(context, kCGLineCapRound);
+        
+        for vertex : Vertex in self.graph!.vertices {
+            for edge : Edge in vertex.adjacencies {
+                let toVertex : Vertex = edge.target
+                UIColor(red:1, green:0.85, blue:0.67, alpha:1).set()
+                CGContextMoveToPoint(context, CGFloat(vertex.x), CGFloat(vertex.y))
+                CGContextAddLineToPoint(context, CGFloat(toVertex.x), CGFloat(toVertex.y))
+                CGContextStrokePath(context)
+            }
+        }
+        
+        // Activity line
+        if let _ = self.path {
+            //
+        } else {
+            UIColor(red:0.05, green:0.59, blue:0.93, alpha:1).set()
             
-            let context = UIGraphicsGetCurrentContext()
+            for line : ActivityLine in self.activityLines {
+                CGContextMoveToPoint(context, CGFloat(line.from.x), CGFloat(line.from.y))
+                CGContextAddLineToPoint(context, CGFloat(line.to.x), CGFloat(line.to.y))
+                CGContextStrokePath(context)
+            }
+        }
+        
+        
+        
+        // Draw path from source to destination vertex
+        if let path = self.path {
+            CGContextSetLineWidth(context, 3.0)
+            UIColor(red:0, green:0.77, blue:0.37, alpha:1).set()
             
-            CGContextClearRect(context, self.bounds)
-            
-            // Set background color
-            UIColor(red:1, green:0.98, blue:0.95, alpha:1).setFill()
-            CGContextFillRect(context, self.bounds)
-            
-            // Draw all edges
-            CGContextSetLineWidth(context, 1.0);
-            CGContextSetLineJoin(context, kCGLineJoinRound);
-            CGContextSetLineCap(context, kCGLineCapRound);
-            
-            for vertex : Vertex in self.graph!.vertices {
-                for edge : Edge in vertex.adjacencies {
-                    let toVertex : Vertex = edge.target
-                    UIColor(red:1, green:0.85, blue:0.67, alpha:1).set()
-                    CGContextMoveToPoint(context, CGFloat(vertex.x), CGFloat(vertex.y))
-                    CGContextAddLineToPoint(context, CGFloat(toVertex.x), CGFloat(toVertex.y))
+            for v1 : Vertex in path {
+                v1.highlighted = true
+                if let v2 = v1.previous {
+                    CGContextMoveToPoint(context, CGFloat(v1.x), CGFloat(v1.y))
+                    CGContextAddLineToPoint(context, CGFloat(v2.x), CGFloat(v2.y))
                     CGContextStrokePath(context)
+                    
                 }
             }
+        }
+        
+        // Draw all vertices
+        for vertex : Vertex in self.graph!.vertices {
             
-            // Activity line
-            if let _ = self.path {
-                //
-            } else {
-                UIColor(red:0.05, green:0.59, blue:0.93, alpha:1).set()
-                
-                for line : ActivityLine in self.activityLines {
-                    CGContextMoveToPoint(context, CGFloat(line.from.x), CGFloat(line.from.y))
-                    CGContextAddLineToPoint(context, CGFloat(line.to.x), CGFloat(line.to.y))
-                    CGContextStrokePath(context)
-                }
-            }
-            
-            
-            
-            // Draw path from source to destination vertex
-            if let path = self.path {
-                CGContextSetLineWidth(context, 3.0)
+            if (vertex.highlighted) {
                 UIColor(red:0, green:0.77, blue:0.37, alpha:1).set()
-                
-                for v1 : Vertex in path {
-                    v1.highlighted = true
-                    if let v2 = v1.previous {
-                        CGContextMoveToPoint(context, CGFloat(v1.x), CGFloat(v1.y))
-                        CGContextAddLineToPoint(context, CGFloat(v2.x), CGFloat(v2.y))
-                        CGContextStrokePath(context)
-                        
-                    }
-                }
+            } else {
+                UIColor(red:1, green:0.35, blue:0.24, alpha:1).set()
             }
             
-            // Draw all vertices
-            for vertex : Vertex in self.graph!.vertices {
-                
-                if (vertex.highlighted) {
-                    UIColor(red:0, green:0.77, blue:0.37, alpha:1).set()
-                } else {
-                    UIColor(red:1, green:0.35, blue:0.24, alpha:1).set()
-                }
-                
-                CGContextAddArc(context, CGFloat(vertex.x), CGFloat(vertex.y), CGFloat(vertex.radius), 0.0, CGFloat(M_PI * 2.0), 1)
-                CGContextFillPath(context)
-            }
+            CGContextAddArc(context, CGFloat(vertex.x), CGFloat(vertex.y), CGFloat(vertex.radius), 0.0, CGFloat(M_PI * 2.0), 1)
+            CGContextFillPath(context)
         }
     }
     
