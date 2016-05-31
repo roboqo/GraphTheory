@@ -48,8 +48,8 @@ class GraphView: UIView {
         
         // Draw all edges
         CGContextSetLineWidth(context, 1.0);
-        CGContextSetLineJoin(context, kCGLineJoinRound);
-        CGContextSetLineCap(context, kCGLineCapRound);
+        CGContextSetLineJoin(context, .Round);
+        CGContextSetLineCap(context, .Round);
         
         for vertex : Vertex in self.graph!.vertices {
             for edge : Edge in vertex.adjacencies {

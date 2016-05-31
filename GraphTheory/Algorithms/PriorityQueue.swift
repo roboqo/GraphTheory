@@ -23,7 +23,6 @@ SOFTWARE.
 import Foundation
 
 public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
-    typealias Element = ValueType
     private final var heap = [(PrioType, ValueType)]()
     
     public init() { }
@@ -54,7 +53,9 @@ public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
         if heap.count == 0 {
             return nil
         }
-        swap(&heap[0], &heap[heap.endIndex - 1])
+        if heap.endIndex - 1 != 0 {
+            swap(&heap[0], &heap[heap.endIndex - 1])
+        }
         let pop = heap.removeLast()
         heapify(0)
         return pop
@@ -88,9 +89,9 @@ public class PriorityQueue<PrioType: Comparable, ValueType>: GeneratorType {
     }
 }
 
+
 extension PriorityQueue: SequenceType {
-    typealias Generator = PriorityQueue
-    public func generate() -> Generator {
+    public func generate() -> PriorityQueue {
         return self
     }
 }

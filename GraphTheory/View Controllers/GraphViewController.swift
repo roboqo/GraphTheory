@@ -116,9 +116,9 @@ class GraphViewController: UIViewController {
             
             for i in 0 ..< path.count {
                 let vertex : Vertex = path[i]
-                print("\(vertex.name)", appendNewline: false)
+                print("\(vertex.name)", terminator: "")
                 if (i < path.count - 1) {
-                    print(" -> ", appendNewline: false)
+                    print(" -> ", terminator: "")
                 }
             }
             print("")
